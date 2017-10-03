@@ -1,0 +1,91 @@
+<odoo>
+
+  <data>
+  	<record id="view_student_student_form_2" model="ir.ui.view">
+            <field name="name">course.course.form.2</field>
+            <field name="model">course.course</field>
+            <field name="arch" type="xml">
+                <form string="Student Information" create="false" delete="false">
+                
+                                <field name="reference_ids" nolabel="1" colspan="4" >
+                                    <tree string="Reference" editable="top" >
+                                        <field name="name" />
+                                        <field name="middle" />
+                                        <field name="last" />
+                                        <field name="description" />
+                                        <field name="designation" />
+                                        <field name="phone" />
+                                        <field name="gender" />
+                                    </tree>
+                                    <form string="Reference">
+                                        <group col="4" colspan="4">
+                                            <field name="name" placeholder="First Name"/>
+                                            <field name="gender"/>
+                                            <field name="middle" placeholder="Middle Name"/>
+                                            <field name="designation" placeholder="Designation"/>
+                                            <field name="last" placeholder="Last Name"/>
+                                            <field name="description" />
+                                            <field name="phone" placeholder="Phone Number"/>
+                                        </group>
+                                    </form>
+                                </field>
+                 </form>
+            </field>
+   	</record>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="course.list">
+      <field name="name">course list</field>
+      <field name="model">course.course</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+   
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="course.action_window">
+      <field name="name">course window</field>
+      <field name="res_model">course.course</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+   
+
+    <!-- server action to the one above -->
+    
+<!--     <record model="ir.actions.server" id="course.action_server">
+      <field name="name">course server</field>
+      <field name="model_id" ref="model_course_course"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record> -->
+   
+
+    <!-- Top menu item -->
+    
+    <menuitem name="course" id="course.menu_root"/>
+   
+    <!-- menu categories -->
+    
+    <menuitem name="Menu 1" id="course.menu_1" parent="course.menu_root"/>
+<!--     <menuitem name="Menu 2" id="course.menu_2" parent="course.menu_root"/>
+ -->   
+    <!-- actions -->
+    
+    <menuitem name="List" id="course.menu_1_list" parent="course.menu_1"
+              action="course.action_window"/>
+<!--     <menuitem name="Server to list" id="course" parent="course.menu_2"
+              action="course.action_server"/> -->
+   
+  </data>
+</odoo>

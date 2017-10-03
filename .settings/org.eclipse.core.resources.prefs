@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//alumnos/__init__.py=utf-8
+encoding//alumnos/__manifest__.py=utf-8
+encoding//alumnos/controllers/controllers.py=utf-8
+encoding//alumnos/models/__init__.py=utf-8
+encoding//alumnos/models/models.py=utf-8
+encoding//course/__init__.py=utf-8
+encoding//course/__manifest__.py=utf-8
+encoding//course/models/models.py=utf-8
+encoding//exam/__manifest__.py=utf-8
+encoding//exam/models/exam.py=utf-8
+encoding//exam/wizard/move_standards.py=utf-8
+encoding//hr_applicant/wizard/__init__.py=utf-8
+encoding//hr_applicant/wizard/select_training.py=utf-8
+encoding//sale_double_validation/model/sale_double_validation_installer.py=utf-8
